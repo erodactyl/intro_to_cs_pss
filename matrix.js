@@ -4,12 +4,6 @@ const squareMatrix = [
   [7, 8, 9]
 ]
 
-/*
- * [7, 4, 1]
- * [8, 5, 2]
- * [9, 6, 3]
- */
-
 function rotate(mat) {
   let result = []
   for (let row = 0; row < mat.length; row++) {
@@ -25,4 +19,22 @@ function rotate(mat) {
   return result
 }
 
-console.log(rotate(squareMatrix))
+function symmetrify(mat) {
+  let result = []
+  for (let row = 0; row < mat.length; row++) {
+    result.push([])
+  }
+
+  for (let row = 0; row < mat.length; row++) {
+    for (let col = row; col < mat.length; col++) {
+      result[row][col] = mat[row][col]
+      if (row !== col) {
+        result[col][row] = mat[row][col]
+      }
+    }
+  }
+
+  return result
+}
+
+console.log(symmetrify(squareMatrix))
