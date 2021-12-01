@@ -1,0 +1,18 @@
+{
+    "type": "lion",
+    "eats": [
+        {
+            "type": "zebra",
+            "eats": [
+                {
+                    "type": "rabbit",
+                    "eats": []
+                }
+            ]
+        },
+        {
+            "type": "human",
+            "eats": []
+        }
+    ]
+}
